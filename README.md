@@ -1,7 +1,7 @@
 Templated Dockerfile extension for Visual Studio debugging
 
 ```
-luda -p 2222:22 visual-studio sudo /usr/sbin/sshd -D`
+luda -p 2222:22 visual-studio sudo /usr/sbin/sshd -D
 ```
 
 From your machine, connect:
