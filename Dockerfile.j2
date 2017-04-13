@@ -7,5 +7,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN mkdir -p /var/run/sshd
 COPY sshd_config /etc/ssh/sshd_config
 
-EXPOSE 22
+EXPOSE 2222
 CMD ["sudo", "/usr/sbin/sshd"]
