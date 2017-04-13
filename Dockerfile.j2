@@ -1,0 +1,11 @@
+MAINTAINER Ryan Olson rolson@nvidia.com
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        openssh-server g++ gdb gdbserver sudo && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /var/run/sshd
+COPY sshd_config /etc/ssh/sshd_config
+
+EXPOSE 22
+CMD ["sudo", "/usr/sbin/sshd"]
